@@ -16,9 +16,11 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin()    
    ],  
+   devtool: 'inline-source-map', //'#source-map',   
    devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    hot: true    
+    hot: true,
+    disableHostCheck: true,       
    },   
    module: {
        rules: [
